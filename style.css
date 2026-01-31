@@ -119,24 +119,64 @@ body {
 /* ================= HERO SECTION ================= */
 .hero-2025 {
     position: relative;
-    height: 67vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    
+    /* NEW HERO COLOR (Deep Cyber Gradient) */
+    background: linear-gradient(160deg, #240b36, #2d0b59, #0b486b);
+    /* Yahan se colors change ho gaye hain (Purple to Blue Mix) */
 }
+
+
+.hero-credits {
+    margin-top: 50px; /* Se neeche hoga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6); /* Halka white text */
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase; /* Har letter bada ho jaisa premium lagne ke liye */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Upar se kati hui line */
+    padding-top: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.credit-item {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.credit-item:hover {
+    color: var(--neon-blue); /* Hover karne par Blue ho jayega */
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.credit-dot {
+    color: var(--neon-pink); /* Dot Pink hogi */
+    font-weight: bold;
+    animation: blink 2s infinite; /* Dot baar-baar chamkegi */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
+
+
 
 /* Animated Grid Background */
 .grid-bg {
-    position: absolute;
-    width: 200%; height: 200%;
-    background-image: 
-        linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    transform: perspective(500px) rotateX(60deg);
-    animation: gridMove 20s linear infinite;
-    z-index: 1;
+   
 }
 
 @keyframes gridMove {
@@ -343,7 +383,7 @@ body {
 }
 
 .daraz-btn:hover {
-    background: var(--neon-purple);
+    background: rgb(255, 166, 0);
     color: #fff;
 }
 
