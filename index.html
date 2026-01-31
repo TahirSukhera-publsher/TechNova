@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMart 2025 | Future is Here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CUSTOM CURSOR (Desktop Only) -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="loader-content">
+            <h1 class="loader-text">TECH<span>MART</span></h1>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="glass-nav">
+        <div class="nav-logo">
+            <i class="fas fa-bolt"></i> <span>TechMart</span>
+        </div>
+        <div class="nav-actions">
+            <div class="search-trigger"><i class="fas fa-search"></i></div>
+            <div class="cart-trigger" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION 2025 ================= -->
+    <header class="hero-2025">
+        <!-- Animated Grid Background -->
+        <div class="grid-bg"></div>
+        
+        <!-- Particles (Divs) -->
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch-text" data-text="TECHMART 2025">Save Your Time&Money</h1>
+            </div>
+            <p class="hero-subtitle">TechMart The Best Mini Market⚡</p>
+            
+            <div class="hero-btns">
+                <a href="#products" class="btn-neon">Explore Store</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= TICKER (New Year Sale) ================= -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker__item">✨ NEW YEAR SALE UP TO 50% OFF ✨</div>
+            <div class="ticker__item">FREE SHIPPING WORLDWIDE 🌍</div>
+            <div class="ticker__item">LATEST GADGETS IN STOCK 🚀</div>
+            <div class="ticker__item">PREMIUM QUALITY GUARANTEED 💎</div>
+        </div>
+    </div>
+
+    <!-- ================= PRODUCTS SECTION ================= -->
+    <section id="products" class="products-section">
+        <div class="section-header">
+            <span class="eyebrow">The Collection</span>
+            <h2>Trending <span class="text-gradient">Now</span></h2>
+        </div>
+
+        <div class="products-grid" id="product-container">
+            <!-- Products injected by JS -->
+        </div>
+    </section>
+
+    <!-- ================= CART MODAL ================= -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="glass-card cart-modal">
+            <div class="cart-header">
+                <h3>My Cart</h3>
+                <button class="close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="cart-items" id="cart-items-container">
+                <!-- Items -->
+            </div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total</span>
+                    <span class="total-amount" id="grand-total">Rs. 0</span>
+                </div>
+                <div class="checkout-form">
+                    <input type="text" id="cust-name" placeholder="Full Name">
+                    <input type="text" id="cust-phone" placeholder="Phone Number">
+                    <button class="btn-checkout" onclick="placeOrder()">Confirm Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
